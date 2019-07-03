@@ -1,0 +1,652 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana !important;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.top {
+    position: relative;
+    min-height: 100vh;
+    background: url("IMG_Work_Final_USE.jpeg") no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.button {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+.button a {
+    background-color: #4286f4;
+    padding: 15px 40px;
+    font-size: 30px;
+    color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.button a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.button a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.button a:hover, .button a:focus, .button a:active {
+    color: #4286f4;
+}
+.button a:hover:before, .button a:focus:before, .button a:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    animation: onLoad-top 3s;
+}
+
+.text .line {
+    margin-bottom: 30px;
+}
+
+.textTop {
+    font-size: 80px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.textBottom {
+    max-width: 530px;
+    font-size: 30px;
+    line-height: 1.5em;
+}
+
+.textBottom a {
+    text-decoration: underline;
+    color: #4286f4;
+}
+
+
+.overMij {
+    position: relative;
+    min-height: 300px;
+    padding: 100px 200px;
+    animation: onLoad 3s;
+}
+
+.overMij-in {
+    display: table;
+    width: 100%;
+}
+
+.overMij-in .left,
+.overMij-in .right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.overMij-in .left {
+    vertical-align: top;
+    padding-right: 50px;
+}
+
+.overMij-in .right img {
+    max-width: 400px;
+}
+
+.overMij .title {
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 10%;
+    height: 4px;
+    background-color: #4286f4;
+    margin-bottom: 60px;
+}
+
+.overMij .textBlock {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.3em;
+}
+
+.overMij a {
+    font-weight: 600;
+    color: #96beff;
+    transition: 200ms color ease-in-out;
+}
+
+.overMij a:hover {
+    color: #000;
+}
+
+.uitlegStage {
+    position: relative;
+    padding: 100px 200px;
+    background-color: #96beff;
+    animation: onLoad-right 3s;
+}
+
+.uitlegTop {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #e8f0ff;
+}
+
+.uitlegBottom a {
+    font-weight: 600;
+    color: #4286f4;
+    transition: 200ms color ease-in-out;
+}
+
+.uitlegBottom a:hover {
+    color: #000;
+}
+
+.uitlegStage .line {
+    margin-bottom: 30px;
+}
+
+.uitlegStage .uitlegBottom {
+    max-width: 1000px;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+.opdrachtenLijst {
+    position: relative;
+    right: 18px;
+}
+
+ul {
+    list-style: none;
+    color: #4286f4;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+li {
+    position: relative;
+    max-width: 260px;
+    margin-bottom: 10px;
+}
+
+.item:before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #4286f4;
+    top: 10px;
+    left: -21px;
+    border-radius: 20px;
+}
+
+li a  {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #4286f4;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+li a:hover:before, li a:focus:before, li a:active:before {
+    right: 50%;
+}
+
+li i {
+    position: relative;
+    top: 5px;
+    cursor: help;
+    float: right;
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 92%;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 200ms ease-in-out;
+}
+
+.info-in {
+    width: 350px;
+    background-color: #4286f4;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+li:hover .info{
+    opacity: 1;
+}
+
+.uitlegSchool {
+    position: relative;
+    padding: 100px 200px;
+    animation: onLoad 3s;
+}
+
+.uitlegSchool .schoolTop {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.uitlegSchool .line {
+    margin-bottom: 30px;
+}
+
+.uitlegSchool .schoolBottom {
+    max-width: 1000px;
+    line-height: 1.3em;
+    font-size: 20px;
+}
+
+.skills {
+    position: relative;
+    padding: 100px 200px;
+    background-color: #96beff;
+    animation: onLoad-right 3s;
+}
+
+.skillsTop {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #e8f0ff;
+}
+
+.skills .line {
+    margin-bottom: 30px;
+}
+
+.skillsBottom {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.skillPoint {
+    display: table-cell;
+}
+
+.skillPoint .skillTitle {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #e8f0ff;
+}
+
+.skillPoint .skillSubs {
+    max-width: 40px;
+    line-height: 1.4em;
+    color: #4286f4;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact {
+    position: relative;
+    padding: 100px 200px;
+    animation: onLoad 3s;
+}
+
+.contactTop {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.contact .line {
+    margin-bottom: 20px;
+}
+
+.contactMid {
+    margin-bottom: 30px;
+}
+
+.contactBottom {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.contactLinks,
+.contactSocialMedia {
+    display: table-cell;
+    padding-right: 20px;
+}
+
+.contactLinksTop,
+.contactSocialMediaTop {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.contactBottom a {
+    margin-bottom: 10px;
+    display: block;
+    margin-left: 10px;
+    color: #4286f4;
+    transition: color 200ms ease-in-out;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contactBottom a:last-child {
+    margin-bottom: 0;
+}
+
+.contactBottom a:hover {
+    color: #000;
+}
+
+.contactBottom i {
+    position: relative;
+    right: 10px;
+}
+
+@media screen and (max-width: 1224px) {
+
+    .overMij {
+        min-height: 300px;
+        padding: 70px 150px;
+    }
+
+    .overMij .right img {
+        max-width: 300px;
+    }
+
+    .uitlegStage {
+        padding: 70px 150px;
+    }
+
+    .uitlegSchool {
+        padding: 70px 150px;
+    }
+
+    .skills {
+        padding: 70px 150px;
+    }
+
+    .contact {
+        padding: 70px 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .overMij {
+        min-height: 200px;
+        padding: 40px 80px;
+    }
+
+    .overMij .right img {
+        max-width: 250px;
+    }
+
+    .uitlegStage {
+        padding: 40px 80px;
+    }
+
+    .uitlegSchool {
+        padding: 40px 80px;
+    }
+
+    .skills {
+        padding: 40px 80px;
+    }
+
+    .contact {
+        padding: 40px 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .overMij {
+        min-height: 200px;
+        padding: 20px 40px;
+    }
+
+    .overMij-in {
+        display: table;
+        width: 100%;
+    }
+
+    .overMij-in .left,
+    .overMij-in .right {
+        display: block;
+    }
+
+    .overMij .left {
+        margin-bottom: 20px;
+    }
+
+    .overMij .right img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .uitlegStage {
+        padding: 20px 40px;
+    }
+
+    li i {
+        display: none !important;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .uitlegSchool {
+        padding: 20px 40px;
+    }
+
+    .skills {
+        padding: 20px 40px;
+    }
+
+    .skillsBottom,
+    .skillPoint {
+        display: block;
+    }
+
+    .skillPoint {
+        margin-bottom: 40px;
+    }
+
+    .skillPoint:last-child {
+        margin: 0;
+    }
+
+    .contact {
+        padding: 20px 40px;
+    }
+
+    .contactBottom,
+    .contactLinks, .contactSocialMedia {
+        display: block;
+    }
+
+    .contactLinks {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .textTop {
+        font-size: 60px;
+    }
+
+    .textBottom {
+        font-size: 20px;
+    }
+
+    .button {
+        top: 65%;
+    }
+
+    .overMij {
+        min-height: auto;
+        padding: 10px 20px;
+    }
+
+    .uitlegStage {
+        padding: 10px 20px;
+    }
+
+    .uitlegSchool {
+        padding: 10px 20px;
+    }
+
+    .skills {
+        padding: 10px 20px;
+    }
+
+    .skillPoint {
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        padding: 10px 20px;
+    }
+}
+
+@keyframes onLoad-top {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 10%;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes onLoad-top {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 10%;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes onLoad-top {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 10%;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes onLoad-top {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 10%;}
+}
+
+@keyframes onLoad {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 0px;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes onLoad {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 0px;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes onLoad {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 0px;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes onLoad {
+    from { opacity: 0; left: -200px}
+    to   { opacity: 1; left: 0px;}
+}
+
+/*   RIGHT   */
+
+@keyframes onLoad-right {
+    from { opacity: 0; right: -200px}
+    to   { opacity: 1; right: 0px;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes onLoad-right {
+    from { opacity: 0; right: -200px}
+    to   { opacity: 1; right: 0px;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes onLoad-right {
+    from { opacity: 0; right: -200px}
+    to   { opacity: 1; right: 0px;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes onLoad-right {
+    from { opacity: 0; right: -200px}
+    to   { opacity: 1; right: 0px;}
+}
